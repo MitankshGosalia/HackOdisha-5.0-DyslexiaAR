@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  web:
+    build: ../web
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+    depends_on:
+      - api
+  api:
+    build: ../services/api
+    command: uvicorn main:app --host 0.0.0.0 --port 8080
+    ports:
+      - "8080:8080"
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: dyslexiaar
+      POSTGRES_USER: dyslexia
+      POSTGRES_PASSWORD: dyslexia
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata: {}
+

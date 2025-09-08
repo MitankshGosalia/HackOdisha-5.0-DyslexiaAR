@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — DyslexiaAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/frontend/index.html">DyslexiaAR</a>
+    <nav class="nav">
+      <a href="/frontend/pages/features.html">Product</a>
+      <a href="/frontend/pages/about.html" aria-current="page">About</a>
+      <a href="/frontend/pages/tutorial.html">How It Works</a>
+      <a class="btn btn-primary" href="/frontend/pages/demo.html">Try the Demo</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
+  </header>
+
+  <main class="container" style="padding-top: 92px; padding-bottom: 56px;">
+    <section class="reveal" style="margin-bottom: 24px;">
+      <h1>Our mission</h1>
+      <p class="subtitle">We build tools that make reading clearer, kinder, and more inclusive.</p>
+    </section>
+
+    <section class="reveal" style="margin-bottom: 48px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;">
+      <div>
+        <h2>Why we built this</h2>
+        <p>Millions of people live with dyslexia. Small design choices can have an outsized impact on comfort and comprehension. We created DyslexiaAR to bring assistive typography into the real world—classrooms, offices, streets—using a camera you already have.</p>
+      </div>
+      <div style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+        <blockquote style="margin:0; color:#9ca3af">“Accessibility is not a feature. It is a foundation.”</blockquote>
+        <div class="small" style="margin-top:8px;">— DyslexiaAR Team</div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>Team</h2>
+      <div style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px;">
+        <div class="card" style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+          <img src="/frontend/assets/images/user-1.jpg" alt="Team member" style="width:100%;height:180px;object-fit:cover;border-radius:8px;"/>
+          <h3 style="margin:12px 0 4px;">Alex Sharma</h3>
+          <div class="small">Product & Research</div>
+        </div>
+        <div class="card" style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+          <img src="/frontend/assets/images/user-2.jpg" alt="Team member" style="width:100%;height:180px;object-fit:cover;border-radius:8px;"/>
+          <h3 style="margin:12px 0 4px;">Riya Patel</h3>
+          <div class="small">ML & Backend</div>
+        </div>
+        <div class="card" style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+          <img src="/frontend/assets/images/user-3.jpg" alt="Team member" style="width:100%;height:180px;object-fit:cover;border-radius:8px;"/>
+          <h3 style="margin:12px 0 4px;">Kabir Das</h3>
+          <div class="small">Frontend & Design</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>DyslexiaAR</strong>
+        <p>Empowering readers through accessible design.</p>
+      </div>
+      <nav>
+        <a href="/frontend/pages/features.html">Product</a>
+        <a href="/frontend/pages/about.html">About</a>
+        <a href="/frontend/pages/tutorial.html">Tutorial</a>
+        <a href="/frontend/pages/demo.html">Demo</a>
+      </nav>
+      <div class="small">© <span id="year"></span> DyslexiaAR.</div>
+    </div>
+  </footer>
+
+  <script src="/frontend/js/main.js"></script>
+</body>
+</html>
+

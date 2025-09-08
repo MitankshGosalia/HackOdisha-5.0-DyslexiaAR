@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo — DyslexiaAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/frontend/index.html">DyslexiaAR</a>
+    <nav class="nav">
+      <a href="/frontend/pages/features.html">Product</a>
+      <a href="/frontend/pages/about.html">About</a>
+      <a href="/frontend/pages/tutorial.html">How It Works</a>
+      <a class="btn btn-primary" href="#" aria-current="page">Demo</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
+  </header>
+
+  <main class="demo-layout">
+    <section class="video-stage">
+      <video id="camera" autoplay playsinline muted></video>
+      <div id="overlay" class="overlay-text">Transformed text will appear here...</div>
+    </section>
+    <aside class="sidebar">
+      <h3>Controls</h3>
+      <div class="control">
+        <label for="fontSelect">Font</label>
+        <select id="fontSelect">
+          <option value="OpenDyslexic" selected>OpenDyslexic</option>
+          <option value="Inter">Inter</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="spacing">Letter Spacing</label>
+        <input type="range" id="spacing" min="0" max="8" step="0.5" value="1" />
+      </div>
+      <div class="control">
+        <label for="lineHeight">Line Height</label>
+        <input type="range" id="lineHeight" min="1.2" max="2.0" step="0.05" value="1.6" />
+      </div>
+      <button id="start" class="btn btn-primary start-btn">Start Analysis</button>
+      <div class="small" style="margin-top:10px;">We only send snapshots, not continuous video.</div>
+    </aside>
+  </main>
+
+  <script src="/frontend/js/main.js"></script>
+  <script src="/frontend/js/demo.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DyslexiaAR: Read the World Clearly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/frontend/css/styles.css" />
+    <meta name="description" content="DyslexiaAR transforms the world around you into dyslexia-friendly text in real-time using your webcam." />
+    <meta name="theme-color" content="#0f172a" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="/frontend/index.html">DyslexiaAR</a>
+        <nav class="nav">
+            <a href="/frontend/pages/features.html">Product</a>
+            <a href="/frontend/pages/about.html">About</a>
+            <a href="/frontend/pages/tutorial.html">How It Works</a>
+            <a class="btn btn-primary" href="/frontend/pages/demo.html">Try the Demo</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Open Menu">☰</button>
+    </header>
+
+    <main>
+        <!-- Hero with video background and parallax overlay -->
+        <section class="hero" id="hero">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="/frontend/assets/videos/hero-placeholder.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay parallax">
+                <h1>DyslexiaAR: Read the World Clearly</h1>
+                <p class="subtitle">Live text capture and dyslexia-friendly transformation. Anywhere. Instantly.</p>
+                <div class="hero-cta">
+                    <a class="btn btn-primary btn-lg" href="/frontend/pages/demo.html">Try the Demo</a>
+                    <a class="btn btn-secondary" href="/frontend/pages/tutorial.html">See How It Works</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value proposition -->
+        <section class="value-prop container reveal">
+            <div class="vp-grid">
+                <div>
+                    <h2>Clarity for every word</h2>
+                    <p>We convert real-world text into a dyslexia-friendly format using cognitive-based typographic rules and an accessible font, so you can focus on meaning not decoding.</p>
+                </div>
+                <ul class="vp-list">
+                    <li><span>✓</span> OpenDyslexic rendering</li>
+                    <li><span>✓</span> Adjustable spacing and line-height</li>
+                    <li><span>✓</span> Works on desktop and mobile</li>
+                    <li><span>✓</span> Private, fast, and simple</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Short explanatory video section -->
+        <section class="explainer container reveal">
+            <div class="media">
+                <video controls poster="/frontend/assets/images/explainer-poster.jpg">
+                    <source src="/frontend/assets/videos/explainer-placeholder.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="copy">
+                <h3>See DyslexiaAR in action</h3>
+                <p>Point your camera at printed text. We capture, analyze, and transform it into a layout designed for dyslexic readers—on the fly.</p>
+            </div>
+        </section>
+
+        <!-- Carousel showcasing diverse users -->
+        <section class="carousel container reveal" aria-label="User Stories">
+            <div class="carousel-track" id="carousel-track">
+                <img src="/frontend/assets/images/user-1.jpg" alt="Student using DyslexiaAR in a library" />
+                <img src="/frontend/assets/images/user-2.jpg" alt="Professional reading a report with DyslexiaAR" />
+                <img src="/frontend/assets/images/user-3.jpg" alt="Parent helping a child read" />
+                <img src="/frontend/assets/images/user-4.jpg" alt="Traveler reading signage" />
+            </div>
+            <div class="carousel-controls">
+                <button class="btn" id="carousel-prev" aria-label="Previous">‹</button>
+                <button class="btn" id="carousel-next" aria-label="Next">›</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>DyslexiaAR</strong>
+                <p>Empowering readers through accessible design.</p>
+            </div>
+            <nav>
+                <a href="/frontend/pages/features.html">Product</a>
+                <a href="/frontend/pages/about.html">About</a>
+                <a href="/frontend/pages/tutorial.html">Tutorial</a>
+                <a href="/frontend/pages/demo.html">Demo</a>
+            </nav>
+            <div class="small">© <span id="year"></span> DyslexiaAR. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="/frontend/js/main.js"></script>
+</body>
+</html>
+

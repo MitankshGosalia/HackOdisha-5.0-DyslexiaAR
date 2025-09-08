@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DyslexiaAR — Product & Features</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/css/styles.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/frontend/index.html">DyslexiaAR</a>
+    <nav class="nav">
+      <a href="/frontend/pages/features.html" aria-current="page">Product</a>
+      <a href="/frontend/pages/about.html">About</a>
+      <a href="/frontend/pages/tutorial.html">How It Works</a>
+      <a class="btn btn-primary" href="/frontend/pages/demo.html">Try the Demo</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
+  </header>
+
+  <main class="container" style="padding-top: 92px; padding-bottom: 56px;">
+    <section class="reveal" style="margin-bottom: 36px;">
+      <h1>Technology that adapts to the way you read</h1>
+      <p class="subtitle">From capture → process → transform. Built with computer vision and accessible design.</p>
+    </section>
+
+    <!-- Flow diagram -->
+    <section class="reveal" style="margin-bottom: 48px;">
+      <h2>Data Pipeline</h2>
+      <svg viewBox="0 0 800 180" width="100%" height="180" aria-label="Flow diagram">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6ee7b7" />
+            <stop offset="100%" stop-color="#34d399" />
+          </linearGradient>
+        </defs>
+        <rect x="40" y="40" width="180" height="100" rx="16" fill="#111827" stroke="rgba(255,255,255,.15)" />
+        <rect x="310" y="40" width="180" height="100" rx="16" fill="#111827" stroke="rgba(255,255,255,.15)" />
+        <rect x="580" y="40" width="180" height="100" rx="16" fill="#111827" stroke="rgba(255,255,255,.15)" />
+        <text x="130" y="100" fill="#e5e7eb" text-anchor="middle" font-size="18">Capture</text>
+        <text x="400" y="100" fill="#e5e7eb" text-anchor="middle" font-size="18">Process</text>
+        <text x="670" y="100" fill="#e5e7eb" text-anchor="middle" font-size="18">Transform</text>
+        <path d="M220 90 L300 90" stroke="url(#g)" stroke-width="4">
+          <animate attributeName="stroke-dasharray" from="0,300" to="300,0" dur="1.6s" repeatCount="indefinite" />
+        </path>
+        <path d="M490 90 L580 90" stroke="url(#g)" stroke-width="4">
+          <animate attributeName="stroke-dasharray" from="0,300" to="300,0" dur="1.6s" repeatCount="indefinite" />
+        </path>
+      </svg>
+    </section>
+
+    <!-- 3D interactive model of the brain -->
+    <section class="reveal" style="margin-bottom: 48px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: center;">
+      <div>
+        <h2>Cognitive-friendly rendering</h2>
+        <p>Research suggests that heavier baselines, increased letter spacing, and consistent line height can improve legibility for dyslexic readers. Interact with the model to explore brain regions associated with reading.</p>
+      </div>
+      <model-viewer src="/frontend/assets/models/brain.gltf" alt="3D model of a human brain" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate exposure="1.0" style="width: 100%; height: 360px; background: #0b1020; border-radius: 12px; border: 1px solid rgba(255,255,255,.08);"></model-viewer>
+    </section>
+
+    <!-- Animated charts -->
+    <section class="reveal" style="margin-bottom: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+        <h3>Latency over time (ms)</h3>
+        <canvas id="latencyChart" height="160"></canvas>
+      </div>
+      <div style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+        <h3>Recognition accuracy (%)</h3>
+        <canvas id="accuracyChart" height="160"></canvas>
+      </div>
+    </section>
+
+    <!-- Tech Stack animated grid -->
+    <section class="reveal">
+      <h2>Tech Stack</h2>
+      <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;">
+        <div class="stack">FastAPI</div>
+        <div class="stack">OpenCV</div>
+        <div class="stack">Tesseract</div>
+        <div class="stack">SQLite</div>
+        <div class="stack">Three/ModelViewer</div>
+        <div class="stack">Chart.js</div>
+        <div class="stack">HTML</div>
+        <div class="stack">CSS</div>
+        <div class="stack">JavaScript</div>
+        <div class="stack">Python</div>
+        <div class="stack">Vercel</div>
+        <div class="stack">Replit</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>DyslexiaAR</strong>
+        <p>Empowering readers through accessible design.</p>
+      </div>
+      <nav>
+        <a href="/frontend/pages/features.html">Product</a>
+        <a href="/frontend/pages/about.html">About</a>
+        <a href="/frontend/pages/tutorial.html">Tutorial</a>
+        <a href="/frontend/pages/demo.html">Demo</a>
+      </nav>
+      <div class="small">© <span id="year"></span> DyslexiaAR.</div>
+    </div>
+  </footer>
+
+  <script src="/frontend/js/main.js"></script>
+  <script>
+    // Charts
+    const latencyCtx = document.getElementById('latencyChart');
+    if (latencyCtx) {
+      new Chart(latencyCtx, {
+        type: 'line',
+        data: { labels: ['0','1','2','3','4','5','6'], datasets: [{ label: 'Latency', data: [140,120,110,100,95,92,90], borderColor: '#34d399', fill: false, tension: .35 }] },
+        options: { plugins:{legend:{labels:{color:'#e5e7eb'}}}, scales:{x:{ticks:{color:'#9ca3af'}}, y:{ticks:{color:'#9ca3af'}}} }
+      });
+    }
+    const accuracyCtx = document.getElementById('accuracyChart');
+    if (accuracyCtx) {
+      new Chart(accuracyCtx, {
+        type: 'bar',
+        data: { labels: ['EN','ES','FR','DE','HI','OD'], datasets: [{ label: 'Accuracy', data: [92,88,86,87,83,80], backgroundColor: '#60a5fa' }] },
+        options: { plugins:{legend:{labels:{color:'#e5e7eb'}}}, scales:{x:{ticks:{color:'#9ca3af'}}, y:{ticks:{color:'#9ca3af'}, suggestedMin:60, suggestedMax:100}} }
+      });
+    }
+  </script>
+</body>
+</html>
+

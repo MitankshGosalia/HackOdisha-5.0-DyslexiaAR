@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works — DyslexiaAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/frontend/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/frontend/index.html">DyslexiaAR</a>
+    <nav class="nav">
+      <a href="/frontend/pages/features.html">Product</a>
+      <a href="/frontend/pages/about.html">About</a>
+      <a href="/frontend/pages/tutorial.html" aria-current="page">How It Works</a>
+      <a class="btn btn-primary" href="/frontend/pages/demo.html">Try the Demo</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open Menu">☰</button>
+  </header>
+
+  <main class="container" style="padding-top: 92px; padding-bottom: 56px;">
+    <section class="reveal" style="margin-bottom: 28px;">
+      <h1>Using DyslexiaAR</h1>
+      <p class="subtitle">Follow these steps for the best experience.</p>
+    </section>
+
+    <section class="reveal" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:32px;">
+      <div class="card" style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+        <div style="font-size:36px;">📷</div>
+        <h3>1. Open the demo</h3>
+        <p>Allow camera access. Position the camera towards text on a page or sign.</p>
+      </div>
+      <div class="card" style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+        <div style="font-size:36px;">🔤</div>
+        <h3>2. Start analysis</h3>
+        <p>We capture frames, extract text, and apply dyslexia-friendly typography.</p>
+      </div>
+      <div class="card" style="background:#0b1020;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px;">
+        <div style="font-size:36px;">⚙️</div>
+        <h3>3. Customize</h3>
+        <p>Adjust font choice, letter spacing, and line height to your preference.</p>
+      </div>
+    </section>
+
+    <section class="reveal" style="display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center;">
+      <video controls poster="/frontend/assets/images/explainer-poster.jpg" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08);">
+        <source src="/frontend/assets/videos/tutorial-snippet.mp4" type="video/mp4" />
+      </video>
+      <div>
+        <h2>Tips</h2>
+        <ul class="vp-list">
+          <li><span>✓</span> Ensure good lighting and steady camera
+          <li><span>✓</span> Avoid extreme angles; keep text level
+          <li><span>✓</span> Use the sidebar controls to increase comfort
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>DyslexiaAR</strong>
+        <p>Empowering readers through accessible design.</p>
+      </div>
+      <nav>
+        <a href="/frontend/pages/features.html">Product</a>
+        <a href="/frontend/pages/about.html">About</a>
+        <a href="/frontend/pages/tutorial.html">Tutorial</a>
+        <a href="/frontend/pages/demo.html">Demo</a>
+      </nav>
+      <div class="small">© <span id="year"></span> DyslexiaAR.</div>
+    </div>
+  </footer>
+
+  <script src="/frontend/js/main.js"></script>
+</body>
+</html>
+
